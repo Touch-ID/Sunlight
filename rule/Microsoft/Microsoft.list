@@ -503,11 +503,6 @@ DOMAIN-SUFFIX,officeppe.net
 DOMAIN-SUFFIX,officewebapps.cn
 DOMAIN-SUFFIX,omniroot.com
 DOMAIN-SUFFIX,onecollector.cloudapp.aria
-DOMAIN-SUFFIX,onedrive.co
-DOMAIN-SUFFIX,onedrive.co.uk
-DOMAIN-SUFFIX,onedrive.eu
-DOMAIN-SUFFIX,onedrive.net
-DOMAIN-SUFFIX,onedrive.org
 DOMAIN-SUFFIX,onenote.com
 DOMAIN-SUFFIX,onenote.net
 DOMAIN-SUFFIX,onestore.ms
@@ -668,13 +663,9 @@ DOMAIN-SUFFIX,yammerusercontent.com
 DOMAIN-SUFFIX,1drv.com
 DOMAIN-SUFFIX,livefilestore.com
 DOMAIN-SUFFIX,microsoftpersonalcontent.com
-DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,sharepointonline.com
 DOMAIN-SUFFIX,spoprod-a.akamaihd.net
 DOMAIN-KEYWORD,microsoft
 DOMAIN-KEYWORD,1drv
-DOMAIN-KEYWORD,onedrive
 DOMAIN-KEYWORD,skydrive
-PROCESS-NAME,OneDrive
-PROCESS-NAME,OneDriveUpdater
