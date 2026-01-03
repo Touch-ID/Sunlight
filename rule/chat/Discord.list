@@ -4,7 +4,8 @@
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:16:55
 # DOMAIN-SUFFIX: 29
-# TOTAL: 29
+# TOTAL: 30
+DOMAIN-KEYWORD,discord
 DOMAIN-SUFFIX,airhorn.solutions
 DOMAIN-SUFFIX,airhornbot.com
 DOMAIN-SUFFIX,bigbeans.solutions
