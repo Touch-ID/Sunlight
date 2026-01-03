@@ -5,7 +5,9 @@
 # UPDATED: 2025-06-06 09:18:53
 # DOMAIN-SUFFIX: 22
 # TOTAL: 22
+# 域名关键字匹配
 DOMAIN-KEYWORD,binance
+# 域名后缀匹配
 DOMAIN-SUFFIX,binance.com
 DOMAIN-SUFFIX,binance.click
 DOMAIN-SUFFIX,binance.cloud
