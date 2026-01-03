@@ -1,4 +1,6 @@
+# 域名关键字匹配
 DOMAIN-KEYWORD,okx
+# 域名后缀匹配
 DOMAIN-SUFFIX,okx.com
 DOMAIN-SUFFIX,okx-httpdns.com
 DOMAIN-SUFFIX,okx-doh.com
