@@ -1,3 +1,10 @@
+# https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Discord/README.md
+# NAME: Discord
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:16:55
+# DOMAIN-SUFFIX: 29
+# TOTAL: 29
 DOMAIN-SUFFIX,airhorn.solutions
 DOMAIN-SUFFIX,airhornbot.com
 DOMAIN-SUFFIX,bigbeans.solutions
@@ -26,3 +33,4 @@ DOMAIN-SUFFIX,discordsays.com
 DOMAIN-SUFFIX,discordstatus.com
 DOMAIN-SUFFIX,hammerandchisel.ssl.zendesk.com
 DOMAIN-SUFFIX,watchanimeattheoffice.com
+DOMAIN-SUFFIX,discord-attachments-uploads-prd.storage.googleapis.com
