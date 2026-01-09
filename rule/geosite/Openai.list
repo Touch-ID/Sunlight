@@ -31,4 +31,4 @@ static.cloudflareinsights.com
 +.turn.livekit.cloud
 o33249.ingest.sentry.io
 +.openai.com
-# https://github.com/Touch-ID/Sunlight/blob/main/rule/AI/Openai.list
+# https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geosite/openai.list
