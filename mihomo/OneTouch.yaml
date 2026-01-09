@@ -163,14 +163,14 @@ rules:
   - RULE-SET,Netflix,国际媒体
   - RULE-SET,Disney,国际媒体
   - RULE-SET,HBO,国际媒体
-  - RULE-SET,China,国内流量
+  - RULE-SET,China,直接连接
   # IP规则
   - RULE-SET,GoogleIP,Google,no-resolve
   - RULE-SET,PrivateIP,直接连接,no-resolve
   - RULE-SET,TelegramIP,社交平台,no-resolve
   - RULE-SET,SocialMediaIP,社交平台,no-resolve
   - RULE-SET,NetflixIP,国际媒体,no-resolve
-  - RULE-SET,ChinaIP,国内流量,no-resolve
+  - RULE-SET,ChinaIP,直接连接,no-resolve
   # 兜底规则
   - MATCH,一键连
 
