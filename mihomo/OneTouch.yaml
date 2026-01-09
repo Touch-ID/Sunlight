@@ -133,7 +133,7 @@ proxy-groups:
   - {name: 社交平台,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png}  
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 手动选择,  type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
-  - {name: 直接连接,  type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
+# - {name: 直接连接,  type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
   - {name: 香港自动,  <<: *BaseUT, filter: *FilterHK, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾自动,  <<: *BaseUT, filter: *FilterTW, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 日本自动,  <<: *BaseUT, filter: *FilterJP, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
@@ -152,11 +152,11 @@ rules:
   - RULE-SET,OpenAi,OpenAi
   - RULE-SET,Gemini,Gemini
   - RULE-SET,Discord,Discord
-  - RULE-SET,Private,直接连接
-  - RULE-SET,Direct,直接连接
-  - RULE-SET,AppleCN,直接连接
-  - RULE-SET,Download,直接连接
-  - RULE-SET,XPTV,直接连接
+  - RULE-SET,Private,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,AppleCN,DIRECT
+  - RULE-SET,Download,DIRECT
+  - RULE-SET,XPTV,DIRECT
   - RULE-SET,Telegram,社交平台
   - RULE-SET,SocialMedia,社交平台
   - RULE-SET,YouTube,国际媒体
@@ -164,14 +164,14 @@ rules:
   - RULE-SET,Netflix,国际媒体
   - RULE-SET,Disney,国际媒体
   - RULE-SET,HBO,国际媒体
-  - RULE-SET,China,直接连接
+  - RULE-SET,China,DIRECT
   # IP规则
   - RULE-SET,GoogleIP,Google,no-resolve
-  - RULE-SET,PrivateIP,直接连接,no-resolve
+  - RULE-SET,PrivateIP,DIRECT,no-resolve
   - RULE-SET,TelegramIP,社交平台,no-resolve
   - RULE-SET,SocialMediaIP,社交平台,no-resolve
   - RULE-SET,NetflixIP,国际媒体,no-resolve
-  - RULE-SET,ChinaIP,直接连接,no-resolve
+  - RULE-SET,ChinaIP,DIRECT,no-resolve
   # 兜底规则
   - MATCH,一键连
 
