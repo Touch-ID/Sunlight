@@ -117,10 +117,10 @@ BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.go
 BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
     
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectAL: &SelectAL   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, 直接连接]}
+SelectAL: &SelectAL   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, DIRECT]}
 SelectOne: &SelectOne {type: select, proxies: [一键连, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择]}
 SelectUS: &SelectUS   {type: select, proxies: [美国自动, 日本自动, 韩国自动, 欧洲自动, 台湾自动, 狮城自动, 手动选择]}
-SelectDC: &SelectDC   {type: select, proxies: [直接连接]}
+SelectDC: &SelectDC   {type: select, proxies: [DIRECT]}
 
 # ==================== 代理策略组 ====================
 proxy-groups:
