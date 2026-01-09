@@ -39,8 +39,6 @@ github-cloud.s3.amazonaws.com
 +.azure
 +.xbox
 +.bing
-+.onedriveupdater
-+.onedrive
 +.msocsp.com
 +.msocdn.com
 +.microsoft.com
@@ -166,7 +164,6 @@ github-cloud.s3.amazonaws.com
 +.microsoftonline-p.com
 +.microsoftonline.com
 +.microsoftpartnercommunity.com
-+.microsoftpersonalcontent.com
 +.microsoftready.com
 +.microsoftsiteselection.com
 +.microsoftstore.com
@@ -231,7 +228,6 @@ github-cloud.s3.amazonaws.com
 +.sfbassets.com
 +.sfbassets.net
 +.sfx.ms
-+.sharepoint.com
 +.sharepointonline.com
 +.signalr.net
 +.skype.com
@@ -279,7 +275,6 @@ github-cloud.s3.amazonaws.com
 +.microsoftnews.net
 +.microsoft.ee
 +.microsoft.cl
-+.sharepoint.cn
 +.microsoftnewsforkids.org
 +.microsoftnewskids.com
 +.microsoftnewskids.net
@@ -293,10 +288,7 @@ github-cloud.s3.amazonaws.com
 +.start.com
 +.microsoft.cat
 +.microsoft.ca
-+.onedrive.com
 +.microsoftnewsforkids.net
-+.livefilestore.com
-+.1drv.com
 +.microsoft.by
 +.microsoftdiplomados.com
 +.bing123.com
@@ -472,7 +464,6 @@ github-cloud.s3.amazonaws.com
 +.azure-dns.info
 +.azure-dns.net
 +.azure-dns.org
-+.spoprod-a.akamaihd.net
 +.live.com.au
 +.visualstudio.co.uk
 +.skype-edf.akadns.net
