@@ -1,40 +1,33 @@
-# NAME: GitHub
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GitHub/README.md
-# UPDATED: 2025-06-12 02:06:19
-# DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 30
-# TOTAL: 31
-# 域名关键字匹配
-DOMAIN-KEYWORD,github
-# 域名后缀匹配
-DOMAIN-SUFFIX,atom.io
-DOMAIN-SUFFIX,dependabot.com
-DOMAIN-SUFFIX,ghcr.io
-DOMAIN-SUFFIX,git.io
-DOMAIN-SUFFIX,github-atom-io-herokuapp-com.freetls.fastly.net
-DOMAIN-SUFFIX,github-avatars.oss-cn-hongkong.aliyuncs.com
-DOMAIN-SUFFIX,github-cloud.s3.amazonaws.com
-DOMAIN-SUFFIX,github.blog
-DOMAIN-SUFFIX,github.com
-DOMAIN-SUFFIX,github.community
-DOMAIN-SUFFIX,github.dev
-DOMAIN-SUFFIX,github.io
-DOMAIN-SUFFIX,githubapp.com
-DOMAIN-SUFFIX,githubassets.com
-DOMAIN-SUFFIX,githubcopilot.com
-DOMAIN-SUFFIX,githubhackathon.com
-DOMAIN-SUFFIX,githubnext.com
-DOMAIN-SUFFIX,githubpreview.dev
-DOMAIN-SUFFIX,githubstatus.com
-DOMAIN-SUFFIX,githubuniverse.com
-DOMAIN-SUFFIX,githubusercontent.com
-DOMAIN-SUFFIX,myoctocat.com
-DOMAIN-SUFFIX,npm.community
-DOMAIN-SUFFIX,npmjs.com
-DOMAIN-SUFFIX,npmjs.org
-DOMAIN-SUFFIX,opensource.guide
-DOMAIN-SUFFIX,rawgit.com
-DOMAIN-SUFFIX,rawgithub.com
-DOMAIN-SUFFIX,repo.new
-DOMAIN-SUFFIX,thegithubshop.com
+github-api.arkoselabs.com
+github-cloud.s3.amazonaws.com
++.githubhackathon.com
++.git.io
++.atom.io
++.ghcr.io
++.githubnext.com
++.github.ai
++.github.blog
++.github.com
++.github.community
++.github.dev
++.github.io
++.githubpreview.dev
++.githubassets.com
++.githubcopilot.com
++.gh.io
++.dependabot.com
++.githubapp.com
++.githubstatus.com
++.githubuniverse.com
++.githubusercontent.com
++.myoctocat.com
++.octocaptcha.com
++.opensource.guide
++.repo.new
++.thegithubshop.com
++.npmjs.org
++.npm.community
++.npmjs.com
++.blob.core.windows.net
++.collector.github.com
++.copilot-telemetry.githubusercontent.com
