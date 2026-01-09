@@ -126,9 +126,9 @@ SelectDC: &SelectDC   {type: select, proxies: [直接连接]}
 proxy-groups:
   - {name: 一键连,    <<: *SelectAL, icon: https://github.com/Touch-ID/Sunlight/blob/main/icon/mihomo.png}
   - {name: 故障转移,  <<: *BaseFB, proxies: [香港自动, 台湾自动, 狮城自动, 日本自动, 韩国自动, 美国自动, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
-  - {name: Google,  <<: *SelectUS, icon: https://github.com/Touch-ID/Sunlight/blob/main/icon/Google.png}
-  - {name: OpenAi,  <<: *SelectUS, icon: https://github.com/Touch-ID/Sunlight/blob/main/icon/OpenAi.png}
-  - {name: Discord,  <<: *SelectOne, icon: https://github.com/Touch-ID/Sunlight/blob/main/icon/Discord.png} 
+  - {name: Google,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google.png}
+  - {name: OpenAi,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/OpenAi.png}
+  - {name: Discord,  <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png} 
   - {name: 社交平台,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png}  
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 国内流量,  <<: *SelectDC, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China.png}
