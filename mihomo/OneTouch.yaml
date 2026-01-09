@@ -166,6 +166,7 @@ rules:
   - RULE-SET,HBO,国际媒体
   - RULE-SET,China,DIRECT
   # IP规则
+  - RULE-SET,AiIP,Gemini,no-resolve
   - RULE-SET,GoogleIP,Google,no-resolve
   - RULE-SET,PrivateIP,DIRECT,no-resolve
   - RULE-SET,TelegramIP,社交平台,no-resolve
@@ -201,7 +202,8 @@ rule-providers:
   HBO:            {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/HBO.mrs}
   China:          {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/China.mrs}
   # IP规则
-  
+
+  AiIP:           {<<: *BehaviorIP, url:   https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/ai.mrs}  
   GoogleIP:       {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs}  
   TelegramIP:     {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Telegram.mrs}  
   SocialMediaIP:  {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/SocialMedia.mrs}  
