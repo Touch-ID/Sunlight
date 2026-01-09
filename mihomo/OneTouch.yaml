@@ -154,7 +154,6 @@ rules:
   - RULE-SET,AppleCN,直接连接
   - RULE-SET,Download,直接连接
   - RULE-SET,XPTV,直接连接
-  - RULE-SET,AI,人工智能
   - RULE-SET,Telegram,社交平台
   - RULE-SET,SocialMedia,社交平台
   - RULE-SET,YouTube,国际媒体
@@ -189,7 +188,6 @@ rule-providers:
   AppleCN:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/AppleCN.mrs}
   Download:       {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Download.mrs}
   XPTV:           {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/XPTV.mrs}
-  AI:             {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/AI.mrs}
   Telegram:       {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Telegram.mrs}
   SocialMedia:    {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/SocialMedia.mrs}  
   YouTube:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/YouTube.mrs}
