@@ -1,8 +1,6 @@
-# 域名关键字匹配
-DOMAIN-KEYWORD,okx
-# 域名后缀匹配
-DOMAIN-SUFFIX,okx.com
-DOMAIN-SUFFIX,okx-httpdns.com
-DOMAIN-SUFFIX,okx-doh.com
-DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net
-DOMAIN-SUFFIX,coinall.ltd
++.okex.com
++.okx.com
++.okx-dns.com
++.okx-dns1.com
++.okx-dns2.com
++.oklink.com
