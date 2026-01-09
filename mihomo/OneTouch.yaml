@@ -128,6 +128,7 @@ proxy-groups:
   - {name: 故障转移,  <<: *BaseFB, proxies: [香港自动, 台湾自动, 狮城自动, 日本自动, 韩国自动, 美国自动, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
   - {name: Google,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google.png}
   - {name: OpenAi,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/OpenAi.png}
+  - {name: Gemini,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/OpenAi.png}
   - {name: Discord,  <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png} 
   - {name: 社交平台,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png}  
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
@@ -149,6 +150,7 @@ rules:
   # 域名规则
   - RULE-SET,Google,Google
   - RULE-SET,OpenAi,OpenAi
+  - RULE-SET,Gemini,Gemini
   - RULE-SET,Discord,Discord
   - RULE-SET,Private,直接连接
   - RULE-SET,Direct,直接连接
@@ -183,6 +185,7 @@ rule-providers:
 
   Google:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/google.mrs}
   OpenAi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geosite/openai.mrs}
+  Gemini:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-gemini.mrs}
   Discord:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/discord.mrs}
   Private:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Private.mrs}
   Direct:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
