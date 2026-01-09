@@ -126,6 +126,7 @@ SelectDC: &SelectDC   {type: select, proxies: [直接连接]}
 proxy-groups:
   - {name: 一键连,    <<: *SelectAL, icon: https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png}
   - {name: 故障转移,  <<: *BaseFB, proxies: [香港自动, 台湾自动, 狮城自动, 日本自动, 韩国自动, 美国自动, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
+  - {name: Google,  <<: *SelectUS, icon: https://github.com/Touch-ID/Sunlight/blob/main/icon/OpenAi.png}
   - {name: OpenAi,  <<: *SelectUS, icon: https://github.com/Touch-ID/Sunlight/blob/main/icon/OpenAi.png}
   - {name: Discord,  <<: *SelectOne, icon: https://github.com/Touch-ID/Sunlight/blob/main/icon/Discord.png} 
   - {name: 社交平台,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png}  
@@ -147,6 +148,7 @@ rules:
   - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN)))),REJECT  # 阻止海外 QUIC
 
   # 域名规则
+  - RULE-SET,Google,Google
   - RULE-SET,OpenAi,OpenAi
   - RULE-SET,Discord,Discord
   - RULE-SET,Private,直接连接
@@ -164,6 +166,7 @@ rules:
   - RULE-SET,Proxy,一键连
   - RULE-SET,China,国内流量
   # IP规则
+  - RULE-SET,GoogleIP,Google,no-resolve
   - RULE-SET,PrivateIP,直接连接,no-resolve
   - RULE-SET,TelegramIP,社交平台,no-resolve
   - RULE-SET,SocialMediaIP,社交平台,no-resolve
@@ -181,7 +184,8 @@ BehaviorIP: &BehaviorIP {type: http, behavior: ipcidr, format: mrs, interval: 86
 rule-providers: 
   # 域名规则
 
-  OpenAi:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geosite/openai.mrs}
+  Google:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/google.mrs}
+  OpenAi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo-lite/geosite/openai.mrs}
   Discord:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/discord.mrs}
   Private:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Private.mrs}
   Direct:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
@@ -198,6 +202,8 @@ rule-providers:
   Proxy:          {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Proxy.mrs}
   China:          {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/China.mrs}
   # IP规则
+  
+  GoogleIP:       {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geoip/google.mrs}  
   TelegramIP:     {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Telegram.mrs}  
   SocialMediaIP:  {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/SocialMedia.mrs}  
   NetflixIP:      {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Netflix.mrs}
