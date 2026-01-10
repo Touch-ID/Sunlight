@@ -182,7 +182,6 @@ rules:
   - RULE-SET,TelegramIP,Telegram,no-resolve
   - RULE-SET,SocialMediaIP,社交平台,no-resolve
   - RULE-SET,NetflixIP,Netflix,no-resolve
-  - RULE-SET,ChinaIP,DIRECT,no-resolve
   - RULE-SET,CnIP,DIRECT
   # 兜底规则
   - MATCH,一键连
@@ -225,6 +224,5 @@ rule-providers:
   SocialMediaIP:  {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/SocialMedia.mrs}  
   NetflixIP:      {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs}
   CnIP:           {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs}
-  ChinaIP:        {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/China.mrs}
   PrivateIP:      {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Private.mrs}
   # ==================== EOF ====================
