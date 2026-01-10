@@ -157,8 +157,9 @@ rules:
   - RULE-SET,OpenAi,OpenAi
   - RULE-SET,Gemini,Gemini
   - RULE-SET,Discord,Discord
-  - RULE-SET,Samsung,DIRECT
+  - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Microsoft@cn,DIRECT
+  - RULE-SET,Samsung,DIRECT
   - RULE-SET,CN,DIRECT
   - RULE-SET,Private,DIRECT
   - RULE-SET,Direct,DIRECT
@@ -200,6 +201,7 @@ rule-providers:
   OpenAi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/openai.mrs}
   Gemini:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-gemini.mrs}
   Discord:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/discord.mrs}
+  Microsoft:      {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs}
   Microsoft@cn:   {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft@cn.mrs}
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
   CN:             {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs}
