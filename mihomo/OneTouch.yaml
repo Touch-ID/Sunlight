@@ -206,7 +206,7 @@ rule-providers:
   Discord:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/discord.mrs}
   Microsoft:      {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs}
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
-  CN:             {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs}
+  CN:             {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/CN.mrs}
   Private:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Private.mrs}
   Direct:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
   AppleCN:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/AppleCN.mrs}
