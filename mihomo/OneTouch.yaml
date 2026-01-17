@@ -117,10 +117,10 @@ BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.go
 BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
     
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectAL: &SelectAL   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, DIRECT]}
-SelectOne: &SelectOne {type: select, proxies: [一键连, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择]}
-SelectUS: &SelectUS   {type: select, proxies: [美国自动, 日本自动, 韩国自动, 欧洲自动, 台湾自动, 狮城自动, 香港自动, 手动选择]}
-SelectDC: &SelectDC   {type: select, proxies: [DIRECT]}
+SelectAL: &SelectAL   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, 直接连接]}
+SelectOne: &SelectOne {type: select, proxies: [一键连, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, 直接连接]}
+SelectUS: &SelectUS   {type: select, proxies: [美国自动, 日本自动, 韩国自动, 欧洲自动, 台湾自动, 狮城自动, 香港自动, 手动选择, 直接连接]}
+SelectDC: &SelectDC   {type: select, proxies: [直接连接]}
 
 # ==================== 代理策略组 ====================
 proxy-groups:
@@ -141,6 +141,7 @@ proxy-groups:
   - {name: Telegram, <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Telegram.png} 
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 手动选择,  type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
+  - {name: 直接连接,  type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
   - {name: 香港自动,  <<: *BaseUT, filter: *FilterHK, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾自动,  <<: *BaseUT, filter: *FilterTW, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
   - {name: 日本自动,  <<: *BaseUT, filter: *FilterJP, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
@@ -152,13 +153,13 @@ proxy-groups:
 # ==================== 规则路由 ====================
 rules: 
   # 拦截规则
-  - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN)))),REJECT  # 阻止海外 QUIC
+  - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN)))),REJECT  # 阻止海外 QUIC直接连接
 
   # 域名规则
   - RULE-SET,TradingView,TradingView
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Binance,Binance
-  - RULE-SET,BinanceCN,DIRECT
+  - RULE-SET,BinanceCN,直接连接
   - RULE-SET,Github,Github
   - RULE-SET,Google,Google
   - RULE-SET,OpenAi,OpenAi
@@ -166,30 +167,30 @@ rules:
   - RULE-SET,Discord,Discord
   - RULE-SET,X,X
   - RULE-SET,FaceBook,FaceBook
-  - RULE-SET,Microsoft,DIRECT
-  - RULE-SET,Samsung,DIRECT
-  - RULE-SET,CN,DIRECT
-  - RULE-SET,Private,DIRECT
-  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Microsoft,直接连接
+  - RULE-SET,Samsung,直接连接
+  - RULE-SET,CN,直接连接
+  - RULE-SET,Private,直接连接
+  - RULE-SET,Direct,直接连接
   - RULE-SET,Apple,Apple
-  - RULE-SET,AppleCN,DIRECT
-  - RULE-SET,Download,DIRECT
-  - RULE-SET,XPTV,DIRECT
+  - RULE-SET,AppleCN,直接连接
+  - RULE-SET,Download,直接连接
+  - RULE-SET,XPTV,直接连接
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Spotify,国际媒体
   - RULE-SET,Netflix,Netflix
   - RULE-SET,Disney,国际媒体
   - RULE-SET,HBO,国际媒体
-  - RULE-SET,China,DIRECT
+  - RULE-SET,China,直接连接
   # IP规则
   - RULE-SET,AiIP,Gemini,no-resolve
   - RULE-SET,GoogleIP,Google,no-resolve
-  - RULE-SET,PrivateIP,DIRECT,no-resolve
+  - RULE-SET,PrivateIP,直接连接,no-resolve
   - RULE-SET,TelegramIP,Telegram,no-resolve
   - RULE-SET,XIP,X,no-resolve
   - RULE-SET,FaceBookIP,FaceBook,no-resolve
   - RULE-SET,NetflixIP,Netflix,no-resolve
-  - RULE-SET,CnIP,DIRECT
+  - RULE-SET,CnIP,直接连接
   # 兜底规则
   - MATCH,一键连
 
