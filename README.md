@@ -1,5 +1,4 @@
 二进制转换：
-#==================================================
 ##域名list转换为二进制
 mihomo convert-ruleset domain text XXX.list XXX.mrs
 ##ip-list转换为二进制
