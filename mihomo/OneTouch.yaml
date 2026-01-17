@@ -135,7 +135,7 @@ proxy-groups:
   - {name: Gemini,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Gemini.png}
   - {name: Discord,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png}
   - {name: X,        <<: *SelectAL, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/X.png}
-  - {name: FaceBook, <<: *SelectAL, icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Facebook.png}
+  - {name: FaceBook, <<: *SelectAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png}
   - {name: Netflix,  <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Netflix.png}
   - {name: Telegram, <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Telegram.png} 
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
