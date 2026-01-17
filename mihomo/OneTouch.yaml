@@ -137,7 +137,6 @@ proxy-groups:
   - {name: X,        <<: *SelectAL, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/X.png}
   - {name: Netflix,  <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Netflix.png}
   - {name: Telegram, <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Telegram.png} 
-  - {name: 社交平台,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/PBS.png}  
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 手动选择,  type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 香港自动,  <<: *BaseUT, filter: *FilterHK, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
@@ -162,6 +161,7 @@ rules:
   - RULE-SET,OpenAi,OpenAi
   - RULE-SET,Gemini,Gemini
   - RULE-SET,Discord,Discord
+  - RULE-SET,X,X
   - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Samsung,DIRECT
   - RULE-SET,CN,DIRECT
@@ -171,8 +171,6 @@ rules:
   - RULE-SET,Download,DIRECT
   - RULE-SET,XPTV,DIRECT
   - RULE-SET,Telegram,Telegram
-  - RULE-SET,SocialMedia,社交平台
-  - RULE-SET,YouTube,国际媒体
   - RULE-SET,Spotify,国际媒体
   - RULE-SET,Netflix,Netflix
   - RULE-SET,Disney,国际媒体
@@ -183,7 +181,7 @@ rules:
   - RULE-SET,GoogleIP,Google,no-resolve
   - RULE-SET,PrivateIP,DIRECT,no-resolve
   - RULE-SET,TelegramIP,Telegram,no-resolve
-  - RULE-SET,SocialMediaIP,社交平台,no-resolve
+  - RULE-SET,XIP,X,no-resolve
   - RULE-SET,NetflixIP,Netflix,no-resolve
   - RULE-SET,CnIP,DIRECT
   # 兜底规则
