@@ -131,6 +131,7 @@ proxy-groups:
   - {name: Binance,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Binance.png}
   - {name: Github,   <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Github.png}
   - {name: Google,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google.png}
+  - {name: Apple,    <<: *SelectUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_1.png}
   - {name: OpenAi,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/OpenAi.png}
   - {name: Gemini,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Gemini.png}
   - {name: Discord,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png}
@@ -170,6 +171,7 @@ rules:
   - RULE-SET,CN,DIRECT
   - RULE-SET,Private,DIRECT
   - RULE-SET,Direct,DIRECT
+  - RULE-SET,Apple,Apple
   - RULE-SET,AppleCN,DIRECT
   - RULE-SET,Download,DIRECT
   - RULE-SET,XPTV,DIRECT
@@ -215,7 +217,8 @@ rule-providers:
   CN:             {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/CN.mrs}
   Private:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Private.mrs}
   Direct:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
-  AppleCN:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/AppleCN.mrs}
+  Apple:          {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs}
+  AppleCN:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs}
   Download:       {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Download.mrs}
   XPTV:           {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/XPTV.mrs}
   Telegram:       {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs}
