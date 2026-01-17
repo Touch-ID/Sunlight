@@ -135,6 +135,7 @@ proxy-groups:
   - {name: Gemini,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Gemini.png}
   - {name: Discord,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png}
   - {name: X,        <<: *SelectAL, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/X.png}
+  - {name: FaceBook, <<: *SelectAL, icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Facebook.png}
   - {name: Netflix,  <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Netflix.png}
   - {name: Telegram, <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Telegram.png} 
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
@@ -163,6 +164,7 @@ rules:
   - RULE-SET,Gemini,Gemini
   - RULE-SET,Discord,Discord
   - RULE-SET,X,X
+  - RULE-SET,FaceBook,FaceBook
   - RULE-SET,Microsoft,DIRECT
   - RULE-SET,Samsung,DIRECT
   - RULE-SET,CN,DIRECT
@@ -183,6 +185,7 @@ rules:
   - RULE-SET,PrivateIP,DIRECT,no-resolve
   - RULE-SET,TelegramIP,Telegram,no-resolve
   - RULE-SET,XIP,X,no-resolve
+  - RULE-SET,FaceBookIP,FaceBook,no-resolve
   - RULE-SET,NetflixIP,Netflix,no-resolve
   - RULE-SET,CnIP,DIRECT
   # 兜底规则
@@ -206,6 +209,7 @@ rule-providers:
   Gemini:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-gemini.mrs}
   Discord:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/discord.mrs}
   X:              {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitter.mrs}
+  FaceBook:       {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs}
   Microsoft:      {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs}
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
   CN:             {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/CN.mrs}
@@ -226,6 +230,7 @@ rule-providers:
   GoogleIP:       {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs}  
   TelegramIP:     {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs}  
   XIP:            {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/twitter.mrs}
+  FaceBookIP:     {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/facebook.mrs}
   NetflixIP:      {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs}
   CnIP:           {<<: *BehaviorIP, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs}
   PrivateIP:      {<<: *BehaviorIP, url: https://github.com/666OS/rules/raw/release/mihomo/ip/Private.mrs}
