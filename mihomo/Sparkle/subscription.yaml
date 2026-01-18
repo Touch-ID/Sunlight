@@ -2,5 +2,5 @@
 PProviders: &PProviders {type: http, interval: 86400, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 300}, filter: '^(?!.*(群|邀|返|循|客|网|获|订|量|到|机|次|版|官|备|过|已|联系|工|贩|通知|卖|防|地|频|无法|说|使|提|访|支|教|关|更|作|加入))'}
 # 远程订阅组❗️注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[A]为每个节点添加机场名称前缀，可自定义。
 proxy-providers!:
-  机场A: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[A] '}}
-  机场B: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[B] '}}
+  优质服务商: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[优] '}}
+  备用服务商: {<<: *PProviders, url: '机场订阅地址', override: {additional-prefix: '[备] '}}
