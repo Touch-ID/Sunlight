@@ -175,8 +175,8 @@ rules:
   - RULE-SET,CN,直接连接
   - RULE-SET,Private,直接连接
   - RULE-SET,Direct,直接连接
-  - RULE-SET,Apple,Apple
   - RULE-SET,AppleCN,直接连接
+  - RULE-SET,Apple,Apple
   - RULE-SET,Download,直接连接
   - RULE-SET,XPTV,直接连接
   - RULE-SET,Spotify,国际媒体
