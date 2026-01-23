@@ -140,8 +140,8 @@ proxy-groups:
   - {name: Telegram, <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Telegram.png} 
   - {name: Discord,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png}
   - {name: X,        <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/X.png}
-  - {name: FaceBook, <<: *SelectAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png}
-  - {name: Reddit,   <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Reddit.png}
+  - {name: FaceBook, <<: *SelectUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png}
+  - {name: Reddit,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Reddit.png}
   - {name: Netflix,  <<: *SelectAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 手动选择,  type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
