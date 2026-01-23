@@ -143,6 +143,7 @@ proxy-groups:
   - {name: X,        <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/X.png}
   - {name: FaceBook, <<: *SelectUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png}
   - {name: Reddit,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Reddit.png}
+  - {name: Twitch,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Reddit.png}
   - {name: 国际媒体,  <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 手动选择,  type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 直接连接,  type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
@@ -176,6 +177,7 @@ rules:
   - RULE-SET,X,X
   - RULE-SET,FaceBook,FaceBook
   - RULE-SET,Reddit,Reddit
+  - RULE-SET,Twitch,Twitch
   - RULE-SET,Microsoft,直接连接
   - RULE-SET,Samsung,直接连接
   - RULE-SET,CN,直接连接
@@ -226,6 +228,7 @@ rule-providers:
   X:              {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitter.mrs}
   FaceBook:       {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/facebook.mrs}
   Reddit:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/reddit.mrs}
+  Twitch:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitch.mrs}
   Microsoft:      {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs}
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
   CN:             {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/CN.mrs}
