@@ -130,6 +130,7 @@ proxy-groups:
   - {name: YouTube,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/YouTube.png}
   - {name: TikTok,   <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TikTok.png}
   - {name: Netflix,  <<: *SelectAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
+  - {name: AppleTV,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Apple_TV.png}
   - {name: Binance,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Binance.png}
   - {name: Okx,      <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Okx.png}
   - {name: Bybit,    <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Bybit.png}
@@ -166,6 +167,7 @@ rules:
   - RULE-SET,YouTube,YouTube
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Netflix,Netflix
+  - RULE-SET,AppleTV,AppleTV
   - RULE-SET,BinanceCN,直接连接
   - RULE-SET,Binance,Binance
   - RULE-SET,Okx,Okx
@@ -218,6 +220,8 @@ rule-providers:
   TradingView:    {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/TradingView.mrs}
   YouTube:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs}
   TikTok:         {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/TikTok.mrs}
+  Netflix:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs}
+  AppleTV:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-tvplus.mrs}
   BinanceCN:      {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/BinanceCN.mrs}
   Binance:        {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/Binance.mrs}
   Okx:            {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs}
@@ -244,7 +248,6 @@ rule-providers:
   Download:       {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Download.mrs}
   XPTV:           {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/XPTV.mrs}
   Spotify:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Spotify.mrs}
-  Netflix:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs}
   Disney:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Disney.mrs}
   HBO:            {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/HBO.mrs}
   China:          {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/China.mrs}
