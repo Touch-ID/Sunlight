@@ -164,6 +164,7 @@ rules:
   - RULE-SET,TradingView,TradingView
   - RULE-SET,YouTube,YouTube
   - RULE-SET,TikTok,TikTok
+  - RULE-SET,Netflix,Netflix
   - RULE-SET,BinanceCN,直接连接
   - RULE-SET,Binance,Binance
   - RULE-SET,Okx,Okx
@@ -180,6 +181,7 @@ rules:
   - RULE-SET,Twitch,Twitch
   - RULE-SET,Microsoft,直接连接
   - RULE-SET,Samsung,直接连接
+  - RULE-SET,XiaoMi,直接连接
   - RULE-SET,CN,直接连接
   - RULE-SET,Private,直接连接
   - RULE-SET,Direct,直接连接
@@ -188,7 +190,6 @@ rules:
   - RULE-SET,Download,直接连接
   - RULE-SET,XPTV,直接连接
   - RULE-SET,Spotify,国际媒体
-  - RULE-SET,Netflix,Netflix
   - RULE-SET,Disney,国际媒体
   - RULE-SET,HBO,国际媒体
   - RULE-SET,China,直接连接
@@ -231,6 +232,7 @@ rule-providers:
   Twitch:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitch.mrs}
   Microsoft:      {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs}
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
+  XiaoMi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xiaomi.mrs}
   CN:             {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/CN.mrs}
   Private:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Private.mrs}
   Direct:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
