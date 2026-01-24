@@ -127,10 +127,10 @@ proxy-groups:
   - {name: 一键连,    <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Mihomo.png}
   - {name: 故障转移,  <<: *BaseFB, proxies: [香港自动, 台湾自动, 狮城自动, 日本自动, 韩国自动, 美国自动, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
   - {name: TradingView,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TradingView.png}
-  - {name: YouTube,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/YouTube.png}
-  - {name: TikTok,   <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TikTok.png}
+  - {name: YouTube,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/YouTube.png}
+  - {name: TikTok,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TikTok.png}
   - {name: Netflix,  <<: *SelectAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
-  - {name: AppleTV,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Apple_TV.png}
+  - {name: AppleTV,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Apple_TV.png}
   - {name: Binance,  <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Binance.png}
   - {name: Okx,      <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Okx.png}
   - {name: Bybit,    <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Bybit.png}
