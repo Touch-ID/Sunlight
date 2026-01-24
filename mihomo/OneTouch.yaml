@@ -135,6 +135,7 @@ proxy-groups:
   - {name: Bybit,    <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Bybit.png}
   - {name: Github,   <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Github.png}
   - {name: Google,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google.png}
+  - {name: GooglePlay,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google-Play.png}
   - {name: Apple,    <<: *SelectUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_1.png}
   - {name: OpenAi,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/ChatGPT.png}
   - {name: Gemini,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Gemini.png}
@@ -171,6 +172,7 @@ rules:
   - RULE-SET,Bybit,Bybit
   - RULE-SET,Github,Github
   - RULE-SET,Google,Google
+  - RULE-SET,GooglePlay,GooglePlay
   - RULE-SET,OpenAi,OpenAi
   - RULE-SET,Gemini,Gemini
   - RULE-SET,Telegram,Telegram
@@ -222,6 +224,7 @@ rule-providers:
   Bybit:          {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs}
   Github:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs}
   Google:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs}
+  GooglePlay:     {<<: *BehaviorDN, url:  https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-play.mrs}
   OpenAi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/openai.mrs}
   Gemini:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-gemini.mrs}
   Telegram:       {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs}
