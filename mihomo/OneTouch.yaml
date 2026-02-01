@@ -9,6 +9,7 @@ FilterJP: &FilterJP '^(?=.*(?i)(日|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*
 FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$'
 FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$'
 FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$'
+FilterTW: &FilterIN '^(?=.*(?i)(印|🇮🇳|印度|IN|IND|in|India))(?!.*(排除1|排除2|5x)).*$'
 FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
 FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇭🇰|🇼🇸|🇹🇼|🇸🇬|🇯🇵|🇰🇷|🇺🇸|🇬🇧|🇦🇹|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|HK|TW|SG|JP|KR|US|GB|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU|HKG|TPE|TSA|KHH|SIN|XSP|NRT|HND|KIX|CTS|FUK|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD|LHR|LGW))'
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
@@ -117,15 +118,15 @@ BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.go
 BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
     
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectAL: &SelectAL   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, 直接连接]}
-SelectOne: &SelectOne {type: select, proxies: [一键连, 香港自动, 台湾自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, 直接连接]}
-SelectUS: &SelectUS   {type: select, proxies: [美国自动, 日本自动, 韩国自动, 欧洲自动, 台湾自动, 狮城自动, 香港自动, 手动选择, 直接连接]}
-SelectDC: &SelectDC   {type: select, proxies: [直接连接]}
+SelectAL: &SelectAL   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 印度自动，日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, 直接连接]}
+SelectOne: &SelectOne {type: select, proxies: [一键连, 香港自动, 台湾自动，印度自动，日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 手动选择, 直接连接]}
+SelectUS: &SelectUS   {type: select, proxies: [美国自动, 日本自动, 韩国自动, 欧洲自动, 台湾自动, 印度自动，狮城自动, 香港自动, 手动选择, 直接连接]}
+SelectDC: &SelectDC   {输入: select, proxies: [直接连接]}
 
 # ==================== 代理策略组 ====================
 proxy-groups:
   - {name: 一键连,       <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Mihomo.png}
-  - {name: 故障转移,     <<: *BaseFB, proxies: [香港自动, 台湾自动, 狮城自动, 日本自动, 韩国自动, 美国自动, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
+  - {name: 故障转移,     <<: *BaseFB, proxies: [香港自动, 台湾自动, 印度自动，狮城自动, 日本自动, 韩国自动, 美国自动, 欧洲自动，手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
   - {name: TradingView, <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TradingView.png}
   - {name: YouTube,     <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/YouTube.png}
   - {name: TikTok,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TikTok.png}
@@ -151,8 +152,9 @@ proxy-groups:
   - {name: 国际媒体,     <<: *SelectOne, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/DomesticMedia.png}
   - {name: 手动选择,     type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
-  - {name: 香港自动,     <<: *BaseUT, filter: *FilterHK, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
+  - {name: 香港自动，    <<: *BaseUT， filter: *FilterHK, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
   - {name: 台湾自动,     <<: *BaseUT, filter: *FilterTW, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
+  - {name: 印度自动,     <<: *BaseUT, filter: *FilterIN, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/India.png}
   - {name: 日本自动,     <<: *BaseUT, filter: *FilterJP, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
   - {name: 狮城自动,     <<: *BaseUT, filter: *FilterSG, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
   - {name: 韩国自动,     <<: *BaseUT, filter: *FilterKR, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
@@ -247,11 +249,11 @@ rule-providers:
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
   XiaoMi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xiaomi.mrs}
   CN:             {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs}
-  Private:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/Private.mrs}
+  私有:            {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/Private.mrs}
   Direct:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Direct.mrs}
   AppleCN:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.mrs}
   Apple:          {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs}
-  Download:       {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Download.mrs}
+  下载:            {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Download.mrs}
   XPTV:           {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/XPTV.mrs}
   Spotify:        {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Spotify.mrs}
   Disney:         {<<: *BehaviorDN, url: https://github.com/666OS/rules/raw/release/mihomo/domain/Disney.mrs}
