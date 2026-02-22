@@ -183,7 +183,6 @@ rules:
   - RULE-SET,HBO,HBO
   - RULE-SET,Spotify,Spotify
   - RULE-SET,Disney,Disney
-  - RULE-SET,BinanceCN,直接连接
   - RULE-SET,Binance,Binance
   - RULE-SET,Okx,Okx
   - RULE-SET,Bybit,Bybit
@@ -201,6 +200,7 @@ rules:
   - RULE-SET,Twitch,Twitch
   - RULE-SET,GooglePlay,GooglePlay
   - RULE-SET,Google,Google
+  - RULE-SET,BinanceCN,直接连接
   - RULE-SET,Microsoft,直接连接
   - RULE-SET,Samsung,直接连接
   - RULE-SET,XiaoMi,直接连接
@@ -241,7 +241,6 @@ rule-providers:
   HBO:            {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/hbo.mrs}
   Spotify:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/spotify.mrs}
   Disney:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/disney.mrs}
-  BinanceCN:      {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/BinanceCN.mrs}
   Binance:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/binance.mrs}
   Okx:            {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/okx.mrs}
   Bybit:          {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/bybit.mrs}
@@ -259,6 +258,7 @@ rule-providers:
   Twitch:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitch.mrs}
   GooglePlay:     {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-play.mrs}
   Google:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs}
+  BinanceCN:      {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/BinanceCN.mrs}
   Microsoft:      {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs}
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
   XiaoMi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xiaomi.mrs}
