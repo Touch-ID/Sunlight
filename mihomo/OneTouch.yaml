@@ -136,7 +136,7 @@ proxy-groups:
   - {name: Netflix,     <<: *SelectAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
   - {name: AppleTV,     <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Apple_TV.png}
   - {name: HBO,         <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/HBO.png}
-  - {name: Disney,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Disney.png}
+  - {name: Disney,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Disney+.png}
   - {name: Spotify,     <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Spotify.png}
   - {name: Binance,     <<: *SelectCrypto, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Binance.png}
   - {name: Okx,         <<: *SelectCrypto, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Okx.png}
