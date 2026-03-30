@@ -121,12 +121,11 @@ BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.go
     
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
 SelectOne: &SelectOne   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 直接连接]}
-SelectTwo: &SelectTwo {type: select, proxies: [香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
+SelectTwo: &SelectTwo   {type: select, proxies: [香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
 SelectThree: &SelectThree   {type: select, proxies: [美国自动, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动,欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
 SelectFour: &SelectFour   {type: select, proxies: [台湾自动, 香港自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
 SelectFive: &SelectFive   {type: select, proxies: [直接连接, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 一键连, 手动选择]}
-SelectSix: &SelectSix   {type: select, proxies: [狮城自动, 香港自动, 台湾自动, 印度自动, 日本自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 直接连接]}
-SelectDC: &SelectDC   {type: select, proxies: [直接连接]}
+SelectSix: &SelectSix   {type: select, proxies: [狮城自动, 香港自动, 台湾自动, 印度自动, 日本自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
 
 # ==================== 代理策略组 ====================
 proxy-groups:
