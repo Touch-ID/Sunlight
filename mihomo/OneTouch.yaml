@@ -120,42 +120,44 @@ BaseUT: &BaseUT {type: url-test, interval: 200, lazy: true, url: 'https://www.go
 BaseFB: &BaseFB {type: fallback, interval: 200, lazy: true, url: 'https://www.google.com/generate_204', hidden: true}
     
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectAL: &SelectAL   {type: select, proxies: [故障转移, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 直接连接]}
-SelectOne: &SelectOne {type: select, proxies: [一键连, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 直接连接]}
-SelectUS: &SelectUS   {type: select, proxies: [美国自动, 日本自动, 韩国自动, 欧洲自动, 澳洲自动, 台湾自动, 印度自动, 狮城自动, 加拿大自动, 手动选择]}
-SelectCrypto: &SelectCrypto   {type: select, proxies: [台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择]}
+SelectOne: &SelectOne   {type: select, proxies: [故障转移, 一键连, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 直接连接]}
+SelectTwo: &SelectTwo {type: select, proxies: [香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
+SelectThree: &SelectThree   {type: select, proxies: [美国自动, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动,欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
+SelectFour: &SelectFour   {type: select, proxies: [台湾自动, 香港自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
+SelectFive: &SelectFive   {type: select, proxies: [直接连接, 香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 一键连, 手动选择]}
+SelectSix: &SelectSix   {type: select, proxies: [狮城自动, 香港自动, 台湾自动, 印度自动, 日本自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择, 一键连, 直接连接]}
 SelectDC: &SelectDC   {type: select, proxies: [直接连接]}
 
 # ==================== 代理策略组 ====================
 proxy-groups:
-  - {name: 一键连,       <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Mihomo.png}
+  - {name: 一键连,       <<: *SSelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Mihomo.png}
   - {name: 故障转移,     <<: *BaseFB, proxies: [香港自动, 台湾自动, 印度自动, 日本自动, 狮城自动, 韩国自动, 美国自动, 欧洲自动, 澳洲自动, 加拿大自动, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/ULB.png}
-  - {name: TradingView, <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TradingView.png}
-  - {name: YouTube,     <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/YouTube.png}
-  - {name: TikTok,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TikTok.png}
-  - {name: Netflix,     <<: *SelectAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
-  - {name: AppleTV,     <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Apple_TV.png}
-  - {name: HBO,         <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/HBO_1.png}
-  - {name: Disney,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Disney+.png}
-  - {name: Spotify,     <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png}
-  - {name: Binance,     <<: *SelectCrypto, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Binance.png}
-  - {name: Okx,         <<: *SelectCrypto, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Okx.png}
-  - {name: Bybit,       <<: *SelectCrypto, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Bybit.png}
-  - {name: Huobi,       <<: *SelectCrypto, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Huobi.png}
-  - {name: Github,      <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Github.png}
-  - {name: OpenAi,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/ChatGPT.png}
-  - {name: Gemini,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Gemini.png}
-  - {name: Xai,         <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Xai.jpg}
-  - {name: Telegram,    <<: *SelectAL, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Telegram.png} 
-  - {name: Discord,     <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png}
-  - {name: X,           <<: *SelectUS, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/X.png}
-  - {name: Instagram,   <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Instagram.png}
-  - {name: FaceBook,    <<: *SelectUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png}
-  - {name: Reddit,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Reddit.png}
-  - {name: Twitch,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Twitch.png}
-  - {name: GooglePlay,  <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google-Play.png}
-  - {name: Google,      <<: *SelectUS, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google.png}
-  - {name: Apple,       <<: *SelectUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_2.png}
+  - {name: TradingView, <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TradingView.png}
+  - {name: YouTube,     <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/YouTube.png}
+  - {name: TikTok,      <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/TikTok.png}
+  - {name: Netflix,     <<: *SelectSix, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Netflix.png}
+  - {name: AppleTV,     <<: *SelectThree, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Apple_TV.png}
+  - {name: HBO,         <<: *SelectThree, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/HBO_1.png}
+  - {name: Disney,      <<: *SelectThree, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Disney+.png}
+  - {name: Spotify,     <<: *SelectThree, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png}
+  - {name: Binance,     <<: *SelectFour, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Binance.png}
+  - {name: Okx,         <<: *SelectFour, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Okx.png}
+  - {name: Bybit,       <<: *SelectFour, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Bybit.png}
+  - {name: Huobi,       <<: *SelectFour, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Huobi.png}
+  - {name: Github,      <<: *SelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Github.png}
+  - {name: OpenAi,      <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/ChatGPT.png}
+  - {name: Gemini,      <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Gemini.png}
+  - {name: Xai,         <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Xai.jpg}
+  - {name: Telegram,    <<: *SSelectOne, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Telegram.png} 
+  - {name: Discord,     <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Discord.png}
+  - {name: X,           <<: *SelectThree, icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/X.png}
+  - {name: Instagram,   <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Instagram.png}
+  - {name: FaceBook,    <<: *SelectThree, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Facebook.png}
+  - {name: Reddit,      <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Reddit.png}
+  - {name: Twitch,      <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Twitch.png}
+  - {name: GooglePlay,  <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google-Play.png}
+  - {name: Google,      <<: *SelectThree, icon: https://raw.githubusercontent.com/Touch-ID/Sunlight/refs/heads/main/icon/Google.png}
+  - {name: Apple,       <<: *SelectFive, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple_2.png}
   - {name: 手动选择,     type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 直接连接,     type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
   - {name: 香港自动,     <<: *BaseUT, filter: *FilterHK, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
