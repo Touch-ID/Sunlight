@@ -22,11 +22,14 @@ OneSmart: &OneSmart {type: select, proxies: [一键智能, 香港智能, 台湾�
 SelectDC: &SelectDC {type: select, proxies: [直接连接, 一键智能, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择]}
 
 # ==================== 代理提供者 ====================
+# 注意：请提供您的机场订阅链接，每个链接一行，并为每个机场命名，末尾的[优][备]为每个节点添加机场名称前缀，可自定义
 proxy-providers:
-  # 优质订阅源 - 优质节点集合，使用时请修改
-  优质服务商: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[优] '}}
-  # 备用订阅源 - 次优节点集合，使用时请修改
-  备用服务商: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[备] '}}
+  # 订阅源1 - 优质节点集合，使用时请修改
+  服务商1: {<<: *BaseProvider, url: '优质订阅源地址', override: {additional-prefix: '[1] '}}
+  # 订阅源2 - 次优节点集合，使用时请修改
+  服务商2: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[2] '}}
+  # 订阅源3 - 次优节点集合，使用时请修改
+  服务商3: {<<: *BaseProvider, url: '备用订阅源地址', override: {additional-prefix: '[3] '}}
 
 # ==================== 核心配置 ====================
 # 基础配置
