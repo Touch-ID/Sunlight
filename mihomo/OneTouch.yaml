@@ -205,6 +205,7 @@ rules:
   - RULE-SET,Twitch,Twitch
   - RULE-SET,GooglePlay,GooglePlay
   - RULE-SET,Google,Google
+  - RULE-SET,DouYin,直接连接
   - RULE-SET,Microsoft,直接连接
   - RULE-SET,Samsung,直接连接
   - RULE-SET,XiaoMi,直接连接
@@ -262,6 +263,7 @@ rule-providers:
   Twitch:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/twitch.mrs}
   GooglePlay:     {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-play.mrs}
   Google:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs}
+  DouYin:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/douyin.mrs}
   Microsoft:      {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs}
   Samsung:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/samsung.mrs}
   XiaoMi:         {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/xiaomi.mrs}
