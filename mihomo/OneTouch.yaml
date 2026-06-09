@@ -41,7 +41,6 @@ tcp-concurrent: true
 log-level: warning
 bind-address: '*'
 find-process-mode: 'always'
-global-client-fingerprint: chrome
 keep-alive-interval: 15
 keep-alive-idle: 600
 
@@ -49,10 +48,8 @@ keep-alive-idle: 600
 authentication:
   - mihomo:sunlight
 skip-auth-prefixes:
-  - 192.168.1.0/24
-  - 192.168.31.0/24
-  - 192.168.100.0/24
   - 127.0.0.1/8
+  - ::1/128
 
 # 实验性功能
 experimental:
@@ -176,7 +173,7 @@ proxy-groups:
 # ==================== 规则路由 ====================
 rules: 
   # 拦截规则
-  - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN)))),REJECT  # 阻止海外 QUIC直接连接
+  - AND,((DST-PORT,443),(NETWORK,UDP),(NOT,((GEOIP,CN,no-resolve)))),REJECT  # 阻止海外 QUIC直接连接
 
   # 域名规则
   - RULE-SET,TradingView,TradingView
@@ -235,7 +232,6 @@ BehaviorDN: &BehaviorDN {type: http, behavior: domain, format: mrs, interval: 86
 BehaviorIP: &BehaviorIP {type: http, behavior: ipcidr, format: mrs, interval: 86400}
 # 规则提供者
 rule-providers: 
-
   # 域名规则
   TradingView:    {<<: *BehaviorDN, url: https://github.com/Touch-ID/Sunlight/raw/refs/heads/main/rule/geosite/TradingView.mrs}
   YouTube:        {<<: *BehaviorDN, url: https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs}
